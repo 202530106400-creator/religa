@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprenda como descartar lixo eletrônico corretamente, proteger o meio ambiente e encontrar formas de reutilizar seus aparelhos.">
+  <meta name="theme-color" content="#080b09">
+  <title>ReLiga — Dê um destino certo ao eletrônico</title>
+  <style>
+    :root{--black:#080b09;--panel:#111713;--panel2:#17221a;--green:#75f09a;--green2:#35c96b;--muted:#aab7ad;--white:#f4fff6;--line:#29372d}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button,a{ -webkit-tap-highlight-color:transparent}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,11,9,.91);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .logo{font-size:1.45rem;font-weight:900;letter-spacing:-1px}.logo span{color:var(--green)}
+    nav{display:flex;gap:22px;align-items:center}nav a{font-size:.92rem;color:#d0dbd2}nav a:hover{color:var(--green)}
+    .menu{display:none;background:transparent;color:var(--green);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .hero{padding:82px 0 74px;overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:390px;height:390px;border-radius:50%;background:var(--green);filter:blur(130px);opacity:.12;right:-100px;top:25px;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:1}
+    .eyebrow{color:var(--green);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:2px}
+    h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;letter-spacing:-3px;margin:16px 0 22px}
+    h1 em{font-style:normal;color:var(--green)}
+    .lead{color:#c0ccc2;max-width:590px;font-size:1.1rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;border:1px solid var(--green);font-weight:800;transition:.2s;cursor:pointer}
+    .btn.primary{background:var(--green);color:#071109}.btn.primary:hover{background:#a0ffb7;transform:translateY(-2px)}
+    .btn.secondary{color:var(--green);background:transparent}.btn.secondary:hover{background:#132219}
+    .visual{min-height:350px;border:1px solid #2a4432;border-radius:28px;background:radial-gradient(circle at 50% 35%,#1c3d27,#101711 62%);display:grid;place-items:center;position:relative;overflow:hidden}
+    .orbit{width:245px;height:245px;border:1px dashed #4c9663;border-radius:50%;display:grid;place-items:center;position:relative}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #386448;border-radius:50%;inset:25px}
+    .orbit:after{inset:-25px;border-color:#284b33}
+    .device{font-size:6rem;filter:drop-shadow(0 12px 24px #0008);z-index:1}
+    .float{position:absolute;background:#0c130e;border:1px solid #33563c;border-radius:14px;padding:10px 13px;font-size:.83rem;color:#dfffe6;box-shadow:0 12px 30px #0005}
+    .f1{top:24px;left:20px}.f2{bottom:28px;right:16px}.f3{bottom:32px;left:20px}
+    section{padding:76px 0}
+    .section-head{max-width:700px;margin-bottom:30px}
+    h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-1.3px;margin:10px 0 14px}
+    .section-head p,.muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px;transition:.2s}
+    .card:hover{border-color:#4c9d63;transform:translateY(-3px)}
+    .icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#193323;color:var(--green);font-size:1.5rem;margin-bottom:17px}
+    .card h3{margin:0 0 8px;font-size:1.13rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
+    .green-section{background:#102217;border-block:1px solid #1d3c27}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+    .step{padding:21px;border-radius:16px;background:#0b140e;border:1px solid #284631}
+    .num{color:var(--green);font-weight:900;font-size:1.7rem}.step h3{margin:8px 0}.step p{margin:0;color:#b6c6b9;font-size:.93rem}
+    .finder{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
+    .finder-box{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:20px}
+    label{display:block;font-weight:750;margin-bottom:9px}
+    select,input[type=search]{width:100%;background:#080d09;color:var(--white);border:1px solid #3a4b3e;border-radius:11px;padding:13px;margin-bottom:14px;outline:none}
+    select:focus,input:focus{border-color:var(--green);box-shadow:0 0 0 3px #75f09a20}
+    .result{background:#14231a;border:1px solid #31563a;border-radius:16px;padding:22px;min-height:180px}
+    .result h3{color:var(--green);margin-top:0}.result p{color:#d0ddd2}
+    .quiz-options{display:grid;gap:10px;margin:18px 0}
+    .quiz-option{background:#0b110d;color:var(--white);border:1px solid #35483a;border-radius:12px;padding:13px;text-align:left;cursor:pointer}
+    .quiz-option:hover{border-color:var(--green)}.quiz-option:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+    #quizFeedback{min-height:28px;color:var(--green);font-weight:700}
+    .faq{max-width:850px;display:grid;gap:10px}
+    details{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:17px 19px}
+    summary{cursor:pointer;font-weight:800}details p{color:var(--muted);margin-bottom:0}
+    .cta{background:linear-gradient(120deg,#173b24,#0f1c13);border:1px solid #315b3b;border-radius:24px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta h2{font-size:clamp(1.8rem,4vw,2.6rem);max-width:650px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#aab7ad;font-size:.88rem}
+    .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .small{font-size:.82rem;color:#91a296}
+    @media(max-width:800px){.hero-grid,.finder{grid-template-columns:1fr}.visual{min-height:300px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}nav{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 4%;background:#0b100c;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+    @media(max-width:520px){.hero{padding:56px 0}.cards,.steps{grid-template-columns:1fr}.cta{padding:25px;align-items:flex-start;flex-direction:column}h1{letter-spacing:-2px}.visual{min-height:270px}.orbit{transform:scale(.82)}section{padding:58px 0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="ReLiga, início">Re<span>Li</span>ga<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav id="mainNav" aria-label="Navegação principal">
+      <a href="#problema">O problema</a><a href="#descarte">Como descartar</a><a href="#destino">Onde levar</a><a href="#quiz">Quiz</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Tecnologia com responsabilidade</div>
+        <h1>Seu eletrônico velho não precisa virar <em>problema.</em></h1>
+        <p class="lead">Celular quebrado, pilha usada ou computador parado? Aprenda a dar o destino certo ao lixo eletrônico e ajude a proteger o planeta.</p>
+        <div class="actions"><a class="btn primary" href="#descarte">♻️ Aprender a descartar</a><a class="btn secondary" href="#quiz">Fazer o quiz ↗</a></div>
+        <p class="small">Uma atitude simples hoje faz diferença no amanhã.</p>
+      </div>
+      <div class="visual" aria-label="Ilustração de um celular cercado por símbolos de reciclagem">
+        <div class="float f1">♻️ Reutilize quando puder</div><div class="float f2">🌱 Menos contaminação</div><div class="float f3">🔋 Descarte consciente</div>
+        <div class="orbit"><div class="device" aria-hidden="true">📱</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Entenda o impacto</div><h2>Lixo eletrônico não é lixo comum.</h2><p>Equipamentos descartados de forma incorreta podem liberar substâncias prejudiciais ao ambiente. Ao mesmo tempo, contêm materiais que podem ser recuperados e usados novamente.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">🌎</div><h3>Proteja a natureza</h3><p>O descarte irregular pode contaminar o solo e a água e prejudicar animais e plantas.</p></article>
+        <article class="card"><div class="icon">🔧</div><h3>Recupere materiais</h3><p>Metais, plásticos e outros componentes podem voltar à cadeia produtiva por meio da reciclagem adequada.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Faça parte da mudança</h3><p>Consertar, doar quando estiver funcionando e encaminhar para coleta são escolhas mais responsáveis.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="green-section" id="descarte">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Guia prático</div><h2>Como descartar do jeito certo</h2><p>Antes de jogar fora, siga estes passos simples.</p></div>
+      <div class="steps">
+        <article class="step"><div class="num">01</div><h3>Veja se ainda funciona</h3><p>Considere consertar, reutilizar ou doar o aparelho em boas condições.</p></article>
+        <article class="step"><div class="num">02</div><h3>Apague seus dados</h3><p>Em celulares e computadores, faça backup e restaure as configurações de fábrica.</p></article>
+        <article class="step"><div class="num">03</div><h3>Separe com cuidado</h3><p>Não abra nem desmonte aparelhos. Guarde pilhas e baterias sem danificá-las.</p></article>
+        <article class="step"><div class="num">04</div><h3>Leve a um ponto correto</h3><p>Procure coleta de eletroeletrônicos, ecopontos ou programas de logística reversa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="destino">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Encontre o destino</div><h2>Qual eletrônico você quer descartar?</h2><p>Escolha um item para receber uma orientação inicial. As opções de coleta variam conforme a cidade.</p></div>
+      <div class="finder">
+        <div class="finder-box">
+          <label for="itemSelect">Tipo de material</label>
+          <select id="itemSelect">
+            <option value="celular">Celular ou tablet</option><option value="computador">Computador ou notebook</option><option value="pilhas">Pilhas e baterias</option><option value="cabos">Cabos e carregadores</option><option value="eletro">Eletrodomésticos pequenos</option><option value="lampada">Lâmpadas</option>
+          </select>
+          <label for="cityInput">Sua cidade (opcional)</label>
+          <input id="cityInput" type="search" placeholder="Ex.: Natal, RN">
+          <button class="btn primary" id="findBtn" type="button">Ver orientação</button>
+        </div>
+        <div class="result" id="finderResult" aria-live="polite"><h3>Seu próximo passo</h3><p>Selecione um material e toque em “Ver orientação” para saber como encaminhá-lo com mais segurança.</p></div>
+      </div>
+      <p class="small" style="margin-top:14px">Dica: procure também no site da prefeitura, em cooperativas ou nos canais oficiais de fabricantes e lojas. Confirme se o local recebe aquele tipo de material antes de sair.</p>
+    </div>
+  </section>
+
+  <section class="green-section" id="quiz">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Teste seus conhecimentos</div><h2>Quiz do descarte consciente</h2><p>Você consegue acertar? Escolha uma resposta para continuar.</p></div>
+      <div class="finder">
+        <div class="finder-box"><div class="eyebrow">Pergunta <span id="qNum">1</span> de 3</div><h3 id="question">Onde devemos descartar um celular que não funciona mais?</h3><div class="quiz-options" id="quizOptions"></div><p id="quizFeedback" aria-live="polite"></p><button class="btn secondary" id="nextBtn" type="button" hidden>Próxima pergunta →</button><p class="small" id="scoreText"></p></div>
+        <div class="result"><div class="icon">💡</div><h3>Você sabia?</h3><p>O lixo eletrônico inclui aparelhos elétricos e eletrônicos e seus acessórios quando deixam de ser úteis. Ele não deve ser colocado automaticamente no lixo doméstico.</p><p>Compartilhe o que aprendeu com colegas e familiares. Informação também ajuda a mudar hábitos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Perguntas frequentes</div><h2>Ficou com dúvida?</h2></div>
+      <div class="faq">
+        <details><summary>Posso colocar pilhas no lixo comum?</summary><p>O mais indicado é levar pilhas e baterias a pontos de coleta específicos, como os disponíveis em algumas lojas e ecopontos. Não tente abrir ou queimar esses itens.</p></details>
+        <details><summary>Posso jogar eletrônicos na lixeira de recicláveis?</summary><p>Não coloque aparelhos eletrônicos na coleta seletiva comum sem confirmar as regras locais. Procure um ponto que aceite resíduos eletroeletrônicos.</p></details>
+        <details><summary>E se o aparelho ainda estiver funcionando?</summary><p>Se for seguro e estiver em boas condições, considere reutilizar, consertar ou doar. Apague seus dados pessoais antes de entregar celulares e computadores.</p></details>
+        <details><summary>Como encontro um ponto de coleta perto de mim?</summary><p>Pesquise “ponto de coleta de lixo eletrônico” junto com o nome da sua cidade. Confira informações atualizadas nos canais da prefeitura, de lojas participantes e de fabricantes.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap"><div class="cta"><div><div class="eyebrow">Comece hoje</div><h2>O futuro também depende do destino que damos à tecnologia.</h2><p class="muted">Repense. Reutilize. Descarte corretamente.</p></div><a class="btn primary" href="#descarte">Quero fazer minha parte ↗</a></div></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><div><a class="logo" href="#inicio">Re<span>Li</span>ga<span>.</span></a><p class="small">Projeto educativo de conscientização ambiental.</p></div><div>Feito para informar e incentivar escolhas responsáveis.<br><span class="small">Confirme sempre as orientações de coleta da sua região.</span></div></div></footer>
+
+<script>
+  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
+  menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+  const tips={
+    celular:{title:'Celular ou tablet',text:'Faça backup, saia das suas contas e restaure o aparelho. Depois, entregue-o a um ponto de coleta de eletroeletrônicos ou a um programa de logística reversa que aceite celulares.'},
+    computador:{title:'Computador ou notebook',text:'Apague seus dados pessoais e não desmonte o equipamento. Procure ecopontos, recicladores especializados ou programas de fabricantes que recebam computadores.'},
+    pilhas:{title:'Pilhas e baterias',text:'Leve a um coletor específico em lojas, supermercados participantes ou ecopontos. Não perfure, esmague, queime ou misture baterias danificadas com outros resíduos.'},
+    cabos:{title:'Cabos e carregadores',text:'Guarde os cabos e leve-os a um ponto que aceite pequenos eletroeletrônicos. Evite jogá-los no lixo comum ou deixá-los na rua.'},
+    eletro:{title:'Eletrodomésticos pequenos',text:'Verifique se o aparelho pode ser consertado ou doado. Se não puder, procure um ecoponto ou programa de logística reversa que aceite esse equipamento.'},
+    lampada:{title:'Lâmpadas',text:'Lâmpadas podem exigir coleta específica. Não quebre nem coloque no reciclável comum; procure pontos de recebimento que aceitem o tipo de lâmpada que você tem.'}
+  };
+  document.getElementById('findBtn').addEventListener('click',()=>{
+    const item=document.getElementById('itemSelect').value, city=document.getElementById('cityInput').value.trim(), t=tips[item];
+    const place=city?` Para ${city}, pesquise os pontos oficiais da prefeitura e confirme previamente se recebem esse material.`:' Informe sua cidade em uma pesquisa local para encontrar pontos próximos.';
+    document.getElementById('finderResult').innerHTML=`<h3>${t.title}</h3><p>${t.text}${place}</p><p><strong>Importante:</strong> confirme horários e materiais aceitos antes de se deslocar.</p>`;
+  });
+  const questions=[
+    {q:'Onde devemos descartar um celular que não funciona mais?',opts:['No lixo comum','Em um ponto de coleta de eletrônicos','Na rua, para alguém pegar'],correct:1,why:'Isso mesmo! Pontos específicos encaminham os materiais para tratamento adequado.'},
+    {q:'O que fazer antes de entregar um celular ou computador?',opts:['Apagar os dados pessoais','Quebrar a tela','Deixar todas as contas conectadas'],correct:0,why:'Correto! Faça backup, saia das contas e restaure as configurações de fábrica.'},
+    {q:'Qual atitude ajuda a reduzir o lixo eletrônico?',opts:['Trocar de aparelho todo ano','Jogar cabos no chão','Consertar, reutilizar ou doar quando possível'],correct:2,why:'Muito bem! Aumentar a vida útil dos aparelhos reduz o desperdício.'}
+  ];
+  let qi=0,score=0,answered=false;
+  const qEl=document.getElementById('question'),optsEl=document.getElementById('quizOptions'),feedback=document.getElementById('quizFeedback'),next=document.getElementById('nextBtn'),qNum=document.getElementById('qNum'),scoreText=document.getElementById('scoreText');
+  function renderQ(){answered=false;const q=questions[qi];qNum.textContent=qi+1;qEl.textContent=q.q;feedback.textContent='';next.hidden=true;optsEl.innerHTML='';q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='quiz-option';b.type='button';b.textContent=o;b.addEventListener('click',()=>answer(i));optsEl.appendChild(b)});scoreText.textContent=`Acertos: ${score}`;}
+  function answer(i){if(answered)return;answered=true;const q=questions[qi];if(i===q.correct)score++;feedback.textContent=(i===q.correct?'✅ '+q.why:'💚 Ainda não! '+q.why);[...optsEl.children].forEach((b,j)=>{b.disabled=true;if(j===q.correct)b.style.borderColor='var(--green)'});scoreText.textContent=`Acertos: ${score} de ${qi+1}`;next.hidden=false;next.textContent=qi===questions.length-1?'Ver resultado':'Próxima pergunta →';}
+  next.addEventListener('click',()=>{if(qi<questions.length-1){qi++;renderQ()}else{qEl.textContent=`Você fez ${score} de ${questions.length} pontos!`;optsEl.innerHTML='';feedback.textContent=score===3?'Mandou bem! Você já conhece atitudes importantes para o descarte consciente.':'Continue aprendendo! Reveja as dicas e tente novamente.';next.textContent='Jogar novamente';next.onclick=()=>{qi=0;score=0;next.onclick=null;renderQ()};scoreText.textContent='Cada atitude responsável conta.';next.hidden=false;}});
+  renderQ();
+</script>
+</body>
+</html>
